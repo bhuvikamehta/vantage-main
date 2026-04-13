@@ -1,0 +1,31 @@
+metrics:
+- name: Total Debit Amount
+  description: Total amount debited from the account over a period.
+  sql_formula: SUM(Debit)
+  grain_hint: monthly
+- name: Total Credit Amount
+  description: Total amount credited to the account over a period.
+  sql_formula: SUM(Credit)
+  grain_hint: monthly
+- name: Net Cash Flow
+  description: Net cash flow (Total Credit - Total Debit) over a period.
+  sql_formula: SUM(Credit) - SUM(Debit)
+  grain_hint: monthly
+- name: Average Monthly Balance
+  description: Average balance of the account per month.
+  sql_formula: AVG(Balance)
+  grain_hint: monthly
+- name: Total Spending by Category
+  description: Total debit amount grouped by transaction category.
+  sql_formula: SUM(Debit) GROUP BY Category
+  grain_hint: category
+- name: Churn Rate
+  description: Not applicable directly from this dataset, but could be inferred if
+    additional data is available.
+  sql_formula: null
+  grain_hint: unknown
+- name: Return on Investment (ROI)
+  description: Not applicable directly from this dataset, but could be inferred if
+    investment data is available.
+  sql_formula: null
+  grain_hint: unknown

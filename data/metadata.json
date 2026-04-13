@@ -1,0 +1,180 @@
+{
+  "source_file": "./data/uploads/AaravSharma_6Y_Transactions_2019-11_to_2025-10.csv",
+  "table_name": "aaravsharma_6y_transactions_2019_11_to_2025_10",
+  "row_count": 1230,
+  "column_count": 12,
+  "schema": {
+    "database": "./data/vantage.db",
+    "table": "aaravsharma_6y_transactions_2019_11_to_2025_10",
+    "columns": [
+      {
+        "name": "Account",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Txn Date",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Value Date",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Description",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Ref/Cheque No.",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Merchant",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "MCC",
+        "sqlite_type": "REAL",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Category",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Channel",
+        "sqlite_type": "TEXT",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Debit",
+        "sqlite_type": "REAL",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Credit",
+        "sqlite_type": "REAL",
+        "not_null": false,
+        "is_pk": false
+      },
+      {
+        "name": "Balance",
+        "sqlite_type": "REAL",
+        "not_null": false,
+        "is_pk": false
+      }
+    ]
+  },
+  "context_graph": {
+    "dataset_name": "aaravsharma_6y_transactions_2019_11_to_2025_10",
+    "entities": [
+      {
+        "table": "aaravsharma_6y_transactions_2019_11_to_2025_10",
+        "primary_key_guess": null,
+        "time_column_guess": "Txn Date",
+        "description": "A table containing transaction details for a bank account over a 6-year period.",
+        "columns": [
+          {
+            "name": "Account",
+            "semantic_type": "identifier",
+            "business_meaning": "Unique identifier for the bank account.",
+            "pii_risk": "medium"
+          },
+          {
+            "name": "Txn Date",
+            "semantic_type": "time",
+            "business_meaning": "Date when the transaction occurred.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Value Date",
+            "semantic_type": "time",
+            "business_meaning": "Date when the transaction value was realized.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Description",
+            "semantic_type": "text",
+            "business_meaning": "Description of the transaction.",
+            "pii_risk": "low"
+          },
+          {
+            "name": "Ref/Cheque No.",
+            "semantic_type": "identifier",
+            "business_meaning": "Reference or cheque number for the transaction.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Merchant",
+            "semantic_type": "text",
+            "business_meaning": "Name of the merchant involved in the transaction.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "MCC",
+            "semantic_type": "category",
+            "business_meaning": "Merchant Category Code, representing the type of business.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Category",
+            "semantic_type": "category",
+            "business_meaning": "Category of the transaction (e.g., Income, Housing, Utilities).",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Channel",
+            "semantic_type": "category",
+            "business_meaning": "Channel through which the transaction was made (e.g., NEFT, POS, NET).",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Debit",
+            "semantic_type": "metric",
+            "business_meaning": "Amount debited from the account in the transaction.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Credit",
+            "semantic_type": "metric",
+            "business_meaning": "Amount credited to the account in the transaction.",
+            "pii_risk": "none"
+          },
+          {
+            "name": "Balance",
+            "semantic_type": "metric",
+            "business_meaning": "Account balance after the transaction.",
+            "pii_risk": "none"
+          }
+        ]
+      }
+    ],
+    "relationships": []
+  },
+  "date_bounds": {
+    "min_date": null,
+    "max_date": null
+  },
+  "instant_insights": {
+    "confidence": 85,
+    "biggest_driver": "The largest contributor to expenses is housing, with a single rent payment of \u20b923,000 dominating the debit transactions.",
+    "key_trend": "Recurring grocery and fuel expenses are evident, with multiple transactions at BigBasket and fuel pumps throughout the month.",
+    "top_insight": "The dataset reflects a balanced mix of income and essential expenses, with a focus on housing, utilities, groceries, and transport, indicating a typical monthly financial pattern."
+  }
+}
